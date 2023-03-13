@@ -9,18 +9,19 @@ var dispStrs = {}
 
 //build the initial numbers
 function buildNums(){
-  let defVals = [4,6,25,50,75,100]
-  // let defVals = [0,0,0,0,0,0]
-  let goalInit = 350
+  let defVals = []//[4,6,25,50,75,100]
+  // let goalInit = 0;//350
   for(let i=0; i<6; i++){
     inp = document.createElement('input')
     inp.type='number'
     $('#nums').append(inp)
     inp.classList.add("numinp");
     inp.classList.add("text-secondary");
-    inp.value = defVals[i]
+    if(i< defVals.length )
+      inp.value = defVals[i]
+
   }
-  $("#goal").val(goalInit)
+  // $("#goal").val(goalInit)
 }
 
 //set up the checkboxes to run code when clicked.
@@ -121,7 +122,7 @@ function find(nums,goal,build_up, cur_ans){
     else
       nextBuildStr = build_up+"/"+cur_num
     nextAns = cur_ans/cur_num
-    find( nums,goal,build_up_tmp,nextAns)
+    find( nums,goal,nextBuildStr,nextAns)
 
     //put cur_num back in the array so we can use it in future recurrings
     nums[z]=cur_num;
