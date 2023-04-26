@@ -193,8 +193,8 @@ function buildDisp(){
   let ct = 0;
   dispStrs[2]=""
   dispStrs[3] = ""
-  dispStrs[4] = ""
-  dispStrs[5] = ""
+  dispStrs[4] = "Note: All operations are left to right, ignoring OOP. That is, assume all OOP are the same priority<br>"
+  dispStrs[5] = "Note: All operations are left to right, ignoring OOP. That is, assume all OOP are the same priority<br>"
   for (let k in fullSolutions) {
     // console.log('Hi',k,fullSolutions[k],Object.keys(fullSolutions[k]).length)
     ct+=Object.keys(fullSolutions[k]).length;
