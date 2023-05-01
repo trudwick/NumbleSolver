@@ -16,9 +16,9 @@ function buildNums(){
     inp.type='number'
     $('#nums').append(inp)
     inp.classList.add("numinp");
-    inp.classList.add("text-secondary");
+    // inp.classList.add("text-secondary");
     if(i< defVals.length )
-      inp.value = defVals[i]
+      inp.placeholder = defVals[i]
 
   }
   $("#goal").val(goalInit)
